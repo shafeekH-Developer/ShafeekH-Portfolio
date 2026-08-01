@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shafeek H - Front-End Developer & Aspiring UI/UX Developer</title>
+  <meta name="description" content="Portfolio of Shafeek H, BCA graduate, entry-level Front-End Developer & Aspiring UI/UX Developer proficient in responsive web design, UI design, and Python.">
+  <meta name="author" content="Shafeek H">
+  <meta name="keywords" content="Shafeek H, Front-End Developer, UI/UX Developer, BCA 2026, Responsive Web Design, Python, Keltron Intern, Web Portfolio">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Shafeek H - Front-End & UI/UX Developer Portfolio">
+  <meta property="og:description" content="Explore the projects, skills, and experience of Shafeek H, an entry-level developer building modern, user-friendly digital experiences.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon & Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Cursor Glow Ring -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Header & Sticky Navigation -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#home" class="logo">
+        &lt;Shafeek<span>.H</span> /&gt;<div class="logo-dot"></div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" id="navDrawer">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-cta">Let's Connect</a>
+      </nav>
+
+      <!-- Mobile Hamburger Toggle -->
+      <div class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section 1: Hero -->
+  <section class="hero" id="home">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    <div class="container hero-content">
+      
+      <!-- Text & Roles -->
+      <div class="hero-text-col reveal active">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Open to Entry-Level & UI/UX Roles</span>
+        </div>
+
+        <h1 class="hero-greeting">
+          Hi, I'm <span class="gradient-text">Shafeek H</span>
+        </h1>
+
+        <div class="typing-container">
+          <span class="typing-text" id="typingText"></span>
+        </div>
+
+        <p class="hero-bio">
+          I'm an entry-level Front-End Developer passionate about creating responsive websites and user-friendly interfaces. My goal is to build intuitive digital experiences while growing into a professional UI/UX Developer. I'm eager to apply my skills in real-world projects and continuously improve as a developer.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <span>View Projects</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <span>Contact Me</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            <span>LinkedIn Profile</span>
+          </a>
+          <div class="social-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>BCA Graduate 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile Image Frame -->
+      <div class="hero-image-col reveal active">
+        <div class="profile-frame-outer">
+          <div class="profile-frame-inner">
+            <img src="assets/images/profile.jpg" alt="Shafeek H Profile Picture" class="profile-img">
+          </div>
+          <!-- Floating Tech Pills -->
+          <div class="floating-tech-badge badge-1">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>UI/UX & Web</span>
+          </div>
+          <div class="floating-tech-badge badge-2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#06B6D4" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span>Python & AI</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section 2: About Me -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">01 / About Me</div>
+        <h2 class="section-title">Driven by Curiosity & Design</h2>
+        <p class="section-subtitle">Combining clean code, modern aesthetics, and user-centric problem solving.</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Text Card -->
+        <div class="about-card reveal">
+          <p class="about-text">
+            <strong>Shafeek H</strong> is a Bachelor of Computer Applications graduate passionate about front-end development and user interface design. He enjoys creating responsive, visually appealing, and user-friendly web applications using modern web technologies. With a strong learning mindset and hands-on internship experience in Python and Artificial Intelligence, he is seeking an opportunity to begin his professional journey as a Front-End or UI/UX Developer.
+          </p>
+
+          <div class="objective-box">
+            <div class="objective-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              <span>Career Objective</span>
+            </div>
+            <p class="objective-text">
+              To secure an entry-level Front-End Developer or UI/UX Developer position where I can apply my technical skills, contribute to meaningful projects, continuously learn new technologies, and grow into a senior UI/UX professional.
+            </p>
+          </div>
+        </div>
+
+        <!-- Highlight Stats Grid -->
+        <div class="about-stats-grid reveal">
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <div class="stat-val">BCA</div>
+            <div class="stat-lbl">Graduated 2026</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <div class="stat-val">Keltron</div>
+            <div class="stat-lbl">Python & AI Intern</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div class="stat-val">100%</div>
+            <div class="stat-lbl">Responsive Layouts</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="stat-val">7+</div>
+            <div class="stat-lbl">Artistic Filter Effects</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 & 4: Education & Experience -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">02 / Journey</div>
+        <h2 class="section-title">Education & Internship</h2>
+        <p class="section-subtitle">Academic foundations and practical hands-on experience in technology.</p>
+      </div>
+
+      <div class="timeline-grid">
+        
+        <!-- Column 1: Internship Experience -->
+        <div class="timeline-column reveal">
+          <h3 class="column-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <span>Internship Experience</span>
+          </h3>
+
+          <div class="timeline-wrapper">
+            <div class="timeline-card">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Internship Period</div>
+              <h4 class="timeline-role">Python & AI Intern</h4>
+              <div class="timeline-org">Keltron Knowledge Centre, Kaloor</div>
+              
+              <ul class="timeline-list">
+                <li class="timeline-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Worked with core Python programming syntax and data structures</span>
+                </li>
+                <li class="timeline-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Learned Artificial Intelligence fundamentals and algorithmic logic</span>
+                </li>
+                <li class="timeline-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Built practical web and automation projects from scratch</span>
+                </li>
+                <li class="timeline-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Improved problem-solving skills through hands-on debugging</span>
+                </li>
+                <li class="timeline-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Gained experience in fundamental machine learning concepts</span>
+                </li>
+                <li class="timeline-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Worked with image processing technologies and computer vision tools</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Education -->
+        <div class="timeline-column reveal">
+          <h3 class="column-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span>Education</span>
+          </h3>
+
+          <div class="timeline-wrapper">
+            <div class="timeline-card">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date">Graduated: 2026</div>
+              <h4 class="timeline-role">Bachelor of Computer Applications (BCA)</h4>
+              <div class="timeline-org">Graduated Degree Program</div>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 12px; line-height: 1.6;">
+                Focused on web programming fundamentals, software development practices, database concepts, object-oriented programming, and user interface design.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Skills -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">03 / Capabilities</div>
+        <h2 class="section-title">Technical & Soft Skills</h2>
+        <p class="section-subtitle">Proficiencies developed through academic study, self-driven practice, and internship work.</p>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Category 1: Front-End -->
+        <div class="skill-category-card reveal">
+          <div class="category-header">
+            <div class="category-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Front-End Development</h3>
+          </div>
+
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>HTML5 & CSS3</span>
+                <span class="gradient-text">92%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="92"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>JavaScript (ES6+)</span>
+                <span class="gradient-text">85%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="85"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Responsive Web Design</span>
+                <span class="gradient-text">90%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="90"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>User Interface Design (UI/UX)</span>
+                <span class="gradient-text">88%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="88"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Programming -->
+        <div class="skill-category-card reveal">
+          <div class="category-header">
+            <div class="category-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Programming & AI</h3>
+          </div>
+
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Python</span>
+                <span class="gradient-text">86%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="86"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Image Processing (OpenCV / Pillow)</span>
+                <span class="gradient-text">82%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="82"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-info">
+                <span>Streamlit & Machine Learning</span>
+                <span class="gradient-text">78%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="78"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="badge-tags">
+            <span class="skill-badge">NumPy</span>
+            <span class="skill-badge">OpenCV</span>
+            <span class="skill-badge">Pillow</span>
+            <span class="skill-badge">rembg</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Professional Skills -->
+        <div class="skill-category-card reveal">
+          <div class="category-header">
+            <div class="category-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Professional Competencies</h3>
+          </div>
+
+          <div class="badge-tags" style="gap: 14px; margin-top: 10px;">
+            <div class="skill-badge" style="padding: 12px 20px; font-size: 0.95rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+              <span>Problem Solving</span>
+            </div>
+
+            <div class="skill-badge" style="padding: 12px 20px; font-size: 0.95rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Team Collaboration</span>
+            </div>
+
+            <div class="skill-badge" style="padding: 12px 20px; font-size: 0.95rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Continuous Learning Mindset</span>
+            </div>
+
+            <div class="skill-badge" style="padding: 12px 20px; font-size: 0.95rem;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              <span>Clean Code Practices</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Services ("What I Do") -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">04 / Services</div>
+        <h2 class="section-title">What I Do</h2>
+        <p class="section-subtitle">Delivering high-value front-end and web engineering solutions.</p>
+      </div>
+
+      <div class="services-grid">
+        
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="service-title">Front-End Development</h3>
+          <p class="service-desc">
+            Build responsive, modern, fast, and user-friendly websites using HTML, CSS, JavaScript, and modern front-end development practices.
+          </p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+          </div>
+          <h3 class="service-title">UI/UX Interface Design</h3>
+          <p class="service-desc">
+            Craft sleek layouts, visually engaging wireframes, accessible component structures, and intuitive digital interaction flows.
+          </p>
+        </div>
+
+        <div class="service-card reveal">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="service-title">Python Web & AI Integration</h3>
+          <p class="service-desc">
+            Develop Python applications, interactive Streamlit dashboards, image transformation algorithms, and basic machine learning workflows.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Featured Project -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">05 / Portfolio Showcase</div>
+        <h2 class="section-title">Featured Project</h2>
+        <p class="section-subtitle">Real-world AI image processing application built with Python and modern tools.</p>
+      </div>
+
+      <!-- Large Interactive Project Showcase Card -->
+      <div class="project-showcase-card reveal">
+        <div class="project-inner-grid">
+          
+          <!-- Project Info -->
+          <div class="project-details">
+            <div class="project-tag">AI & Image Processing Web App</div>
+            <h3 class="project-title gradient-text">Image Conversion Studio</h3>
+            
+            <p class="project-description">
+              An AI-powered image processing web application that allows users to upload an image and convert it into different artistic styles. The application provides seven unique visual effects, allowing users to transform their images based on personal preference.
+            </p>
+
+            <div class="project-features-list">
+              <div class="feature-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Image upload functionality</span>
+              </div>
+              <div class="feature-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Real-time image transformation</span>
+              </div>
+              <div class="feature-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Multiple artistic filters</span>
+              </div>
+              <div class="feature-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>User-friendly interface</span>
+              </div>
+              <div class="feature-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Fast image processing</span>
+              </div>
+              <div class="feature-pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Clean responsive layout</span>
+              </div>
+            </div>
+
+            <!-- Tech Badges -->
+            <div class="tech-stack-badges">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Streamlit</span>
+              <span class="tech-badge">OpenCV</span>
+              <span class="tech-badge">Pillow</span>
+              <span class="tech-badge">NumPy</span>
+              <span class="tech-badge">rembg</span>
+              <span class="tech-badge">Basic ML</span>
+            </div>
+
+            <div class="project-actions">
+              <a href="#contact" class="btn btn-primary">
+                <span>Request Live Demo</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub Code</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Live Interactive Effect Filter Simulator -->
+          <div class="project-preview-wrapper">
+            <div class="effect-selector-header">
+              <div class="effect-selector-title">
+                <span>Interactive Live Effect Preview</span>
+                <span style="font-size: 0.75rem; font-weight: normal; color: var(--text-muted);">Click tabs to sample effects</span>
+              </div>
+            </div>
+
+            <!-- 7 Effect Tabs -->
+            <div class="effect-tabs">
+              <button class="effect-tab active" data-effect="mosaic">Mosaic</button>
+              <button class="effect-tab" data-effect="watercolor">Watercolor</button>
+              <button class="effect-tab" data-effect="charcoal">Charcoal Sketch</button>
+              <button class="effect-tab" data-effect="pencil">Pencil Sketch</button>
+              <button class="effect-tab" data-effect="oil">Oil Painting</button>
+              <button class="effect-tab" data-effect="bg-remove">BG Removal</button>
+              <button class="effect-tab" data-effect="anime">Anime Effect</button>
+              <button class="effect-tab" data-effect="original">Original</button>
+            </div>
+
+            <!-- Canvas Container -->
+            <div class="effect-canvas-container">
+              <canvas id="effectCanvas"></canvas>
+              <div class="canvas-effect-overlay">
+                <span>Effect: <strong id="activeEffectName" class="gradient-text">Mosaic</strong></span>
+                <span id="activeEffectTech" class="effect-status-tag">OpenCV Block Aggregation & Color Pooling</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Contact ("Let's Work Together") -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">06 / Connect</div>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">I'm currently seeking entry-level Front-End & UI/UX Developer opportunities. Feel free to reach out!</p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Recruiter CTA & Info Card -->
+        <div class="contact-info-card reveal">
+          <div>
+            <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 12px;">Get In Touch</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+              Whether you are a recruiter looking for a motivated entry-level developer, a teammate with an exciting project, or simply want to connect, my inbox is always open.
+            </p>
+
+            <div class="contact-detail-list">
+              <div class="contact-detail-item">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <div class="contact-lbl">Email Address</div>
+                  <div class="contact-val">shafeek.h.dev@gmail.com</div>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <div class="contact-lbl">Location</div>
+                  <div class="contact-val">Kaloor, Kerala, India</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="linkedin-cta-card">
+            <div>
+              <div style="font-weight: 700; font-size: 0.95rem; color: #FFFFFF;">Professional Network</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Connect with Shafeek on LinkedIn</div>
+            </div>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="linkedin-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              <span>Connect</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Form Card -->
+        <div class="contact-form-card reveal">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="senderName" class="form-label">Your Name</label>
+              <input type="text" id="senderName" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+            </div>
+
+            <div class="form-group">
+              <label for="senderEmail" class="form-label">Your Email</label>
+              <input type="email" id="senderEmail" class="form-control" placeholder="e.g. sarah@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="senderMsg" class="form-label">Message</label>
+              <textarea id="senderMsg" class="form-control" placeholder="Hi Shafeek, we'd love to invite you for an interview..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+
+            <div class="toast-msg" id="toastMsg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Thank you! Your message has been sent successfully.</span>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 9: Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3 class="gradient-text">Shafeek H</h3>
+          <p>Front-End Developer & Aspiring UI/UX Developer</p>
+        </div>
+
+        <div>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            <span>Connect on LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>Designed & Developed by Shafeek H</div>
+        <div>&copy; 2026 Shafeek H. All Rights Reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- JavaScript Modules -->
+  <script src="js/project-effects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
