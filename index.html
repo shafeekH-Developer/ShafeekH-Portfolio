@@ -623,20 +623,27 @@
 
         <!-- Interactive Form Card -->
         <div class="contact-form-card reveal">
-          <form id="contactForm">
+          <!-- Hidden iframe for silent background submission to Google Forms -->
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
+          <form id="contactForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe1Vya07EHmw6SlHdO49Wvj6Fngpfw2nQYFaEmpUCwMitlD_g/formResponse" method="POST" target="hidden_iframe">
+            <input type="hidden" name="fvv" value="1">
+            <input type="hidden" name="pageHistory" value="0">
+            <input type="hidden" name="fbzx" value="7335004845062151048">
+
             <div class="form-group">
               <label for="senderName" class="form-label">Your Name</label>
-              <input type="text" id="senderName" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+              <input type="text" id="senderName" name="entry.1933949495" class="form-control" placeholder="e.g. Sarah Jenkins" required>
             </div>
 
             <div class="form-group">
               <label for="senderEmail" class="form-label">Your Email</label>
-              <input type="email" id="senderEmail" class="form-control" placeholder="e.g. sarah@company.com" required>
+              <input type="email" id="senderEmail" name="entry.1286056310" class="form-control" placeholder="e.g. sarah@company.com" required>
             </div>
 
             <div class="form-group">
               <label for="senderMsg" class="form-label">Message</label>
-              <textarea id="senderMsg" class="form-control" placeholder="Hi Shafeek, we'd love to invite you for an interview..." required></textarea>
+              <textarea id="senderMsg" name="entry.133941650" class="form-control" placeholder="Hi Shafeek, we'd love to invite you for an interview..." required></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary" style="width: 100%;">
@@ -683,6 +690,36 @@
   <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
+
+  <!-- Submission Confirmation Modal -->
+  <div class="modal-overlay" id="confirmModal" aria-hidden="true" role="dialog" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      <div class="modal-icon-badge">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+      </div>
+      <h3 class="modal-title" id="modalTitle">Message Delivered!</h3>
+      <p class="modal-message">
+        Thank you, <strong id="modalSenderName">Friend</strong>! Your message has been successfully recorded and sent directly to Shafeek's Google Form.
+      </p>
+      <div class="modal-details">
+        <div class="modal-detail-row">
+          <span>Sent To:</span>
+          <strong>Shafeek H (shafeek.h.dev@gmail.com)</strong>
+        </div>
+        <div class="modal-detail-row">
+          <span>Status:</span>
+          <span class="status-pill"><span class="status-dot"></span> Response Recorded</span>
+        </div>
+      </div>
+      <button class="btn btn-primary modal-action-btn" id="modalOkBtn">
+        <span>Done</span>
+      </button>
+    </div>
+  </div>
 
   <!-- JavaScript Modules -->
   <script src="js/project-effects.js"></script>

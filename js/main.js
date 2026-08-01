@@ -233,34 +233,74 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -------------------------------------------------------------
-   * 6. Contact Form Handler with Validation & Toast
+   * 6. Contact Form Handler with Google Forms & Confirmation Modal
    * ------------------------------------------------------------- */
   const contactForm = document.getElementById('contactForm');
   const toastMsg = document.getElementById('toastMsg');
+  const confirmModal = document.getElementById('confirmModal');
+  const modalCloseBtn = document.getElementById('modalCloseBtn');
+  const modalOkBtn = document.getElementById('modalOkBtn');
+  const modalSenderName = document.getElementById('modalSenderName');
+
+  function openConfirmModal(senderName) {
+    if (confirmModal) {
+      if (modalSenderName) {
+        modalSenderName.textContent = senderName || 'Friend';
+      }
+      confirmModal.classList.add('active');
+      confirmModal.setAttribute('aria-hidden', 'false');
+    }
+  }
+
+  function closeConfirmModal() {
+    if (confirmModal) {
+      confirmModal.classList.remove('active');
+      confirmModal.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeConfirmModal);
+  if (modalOkBtn) modalOkBtn.addEventListener('click', closeConfirmModal);
+  if (confirmModal) {
+    confirmModal.addEventListener('click', (e) => {
+      if (e.target === confirmModal) {
+        closeConfirmModal();
+      }
+    });
+  }
 
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
+      const nameInput = document.getElementById('senderName');
+      const emailInput = document.getElementById('senderEmail');
+      const msgInput = document.getElementById('senderMsg');
 
-      const name = document.getElementById('senderName').value.trim();
-      const email = document.getElementById('senderEmail').value.trim();
-      const message = document.getElementById('senderMsg').value.trim();
+      const name = nameInput ? nameInput.value.trim() : '';
+      const email = emailInput ? emailInput.value.trim() : '';
+      const message = msgInput ? msgInput.value.trim() : '';
 
       if (!name || !email || !message) {
+        e.preventDefault();
         alert('Please fill out all fields before submitting.');
         return;
       }
 
       const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
+      const originalText = submitBtn ? submitBtn.innerHTML : '';
 
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = `<span>Sending...</span>`;
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `<span>Sending...</span>`;
+      }
 
+      // Allow native form POST to hidden_iframe target, then trigger UI confirmation
       setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-        contactForm.reset();
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+
+        openConfirmModal(name);
 
         if (toastMsg) {
           toastMsg.classList.add('show');
@@ -268,7 +308,9 @@ document.addEventListener('DOMContentLoaded', () => {
             toastMsg.classList.remove('show');
           }, 4500);
         }
-      }, 1200);
+
+        contactForm.reset();
+      }, 1000);
     });
   }
 
