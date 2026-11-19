@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const typingElement = document.getElementById('typingText');
   const roles = [
     'Front-End Developer',
-    'Aspiring UI/UX Developer',
+    'Full-Stack Developer',
+    'React & Flask Developer',
     'Responsive Web Designer',
     'Python Developer'
   ];
