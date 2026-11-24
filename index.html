@@ -15,6 +15,21 @@
 
   <!-- Favicon & Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Project screenshot galleries */
+    .shot-gallery { flex-direction: column; justify-content: center; gap: 14px; }
+    .shot-gallery .browser-screen { aspect-ratio: 1400 / 715; }
+    .shot-gallery .browser-screen img.shot { opacity: 0; transition: opacity .35s ease; }
+    .shot-gallery .browser-screen img.shot.active { opacity: 1; }
+    .shot-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; width: 100%; }
+    .shot-tab { font: inherit; font-size: .78rem; padding: 6px 14px; border-radius: 999px; cursor: pointer;
+      color: var(--text-muted); background: rgba(255,255,255,.05); border: 1px solid var(--border-color);
+      transition: color .2s, background .2s, border-color .2s; }
+    .shot-tab:hover { color: var(--text-main, #fff); border-color: rgba(139,92,246,.6); }
+    .shot-tab.active { color: #fff; background: rgba(139,92,246,.35); border-color: rgba(139,92,246,.8); }
+    .shot-tab:focus-visible { outline: 2px solid #a78bfa; outline-offset: 2px; }
+    @media (max-width: 600px) { .shot-gallery .browser-screen { aspect-ratio: 1400 / 715; } }
+  </style>
 </head>
 <body>
 
@@ -356,6 +371,15 @@
             </div>
             <div class="skill-item">
               <div class="skill-info">
+                <span>Node.js &amp; Express</span>
+                <span class="gradient-text">70%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
                 <span>PostgreSQL &amp; SQLAlchemy</span>
                 <span class="gradient-text">70%</span>
               </div>
@@ -377,6 +401,8 @@
           <div class="badge-tags">
             <span class="skill-badge">JWT Auth</span>
             <span class="skill-badge">Socket.IO</span>
+            <span class="skill-badge">Nodemailer</span>
+            <span class="skill-badge">Neon</span>
             <span class="skill-badge">Cloudflare R2</span>
             <span class="skill-badge">Render</span>
             <span class="skill-badge">Vercel</span>
@@ -574,8 +600,8 @@
             <p class="project-note">The backend runs on a free hosting tier, so the first load can take up to a minute.</p>
           </div>
 
-          <!-- Browser preview (add assets/images/reelverse-home.png to show a real screenshot) -->
-          <div class="project-preview-wrapper rv-preview">
+          <!-- Browser preview: screenshot gallery (assets/images/reelverse-*.webp) -->
+          <div class="project-preview-wrapper rv-preview shot-gallery">
             <div class="browser-frame">
               <div class="browser-bar">
                 <span></span><span></span><span></span>
@@ -589,8 +615,17 @@
                     <i></i><i></i><i></i><i></i>
                   </div>
                 </div>
-                <img src="assets/images/reelverse-home.png" alt="Screenshot of the ReelVerse home page" loading="lazy" onerror="this.style.display='none'">
+                <img class="shot active" src="assets/images/reelverse-home.webp" alt="ReelVerse screenshot: Home" loading="eager" onerror="this.style.display='none'">
+                <img class="shot" src="assets/images/reelverse-explore.webp" alt="ReelVerse screenshot: Explore" loading="lazy" onerror="this.style.display='none'">
+                <img class="shot" src="assets/images/reelverse-login.webp" alt="ReelVerse screenshot: Login" loading="lazy" onerror="this.style.display='none'">
+                <img class="shot" src="assets/images/reelverse-video.png" alt="ReelVerse screenshot: Video player" loading="lazy" onerror="this.style.display='none'">
               </div>
+            </div>
+            <div class="shot-tabs" role="tablist" aria-label="ReelVerse screenshots">
+              <button type="button" class="shot-tab active" data-shot="0">Home</button>
+              <button type="button" class="shot-tab" data-shot="1">Explore</button>
+              <button type="button" class="shot-tab" data-shot="2">Login</button>
+              <button type="button" class="shot-tab" data-shot="3">Video</button>
             </div>
           </div>
 
@@ -659,8 +694,8 @@
             <p class="project-note">The API runs on a free hosting tier, so the first load can take up to a minute.</p>
           </div>
 
-          <!-- Browser preview (add assets/images/jobtracker-board.png to show a real screenshot) -->
-          <div class="project-preview-wrapper rv-preview">
+          <!-- Browser preview: screenshot gallery (assets/images/jobtracker-*.webp) -->
+          <div class="project-preview-wrapper rv-preview shot-gallery">
             <div class="browser-frame">
               <div class="browser-bar">
                 <span></span><span></span><span></span>
@@ -674,8 +709,17 @@
                     <i></i><i></i><i></i><i></i>
                   </div>
                 </div>
-                <img src="assets/images/jobtracker-board.png" alt="Screenshot of the JobTracker Kanban board with sample applications" loading="lazy" onerror="this.style.display='none'">
+                <img class="shot active" src="assets/images/jobtracker-board.webp" alt="JobTracker screenshot: Board" loading="eager" onerror="this.style.display='none'">
+                <img class="shot" src="assets/images/jobtracker-list.webp" alt="JobTracker screenshot: List" loading="lazy" onerror="this.style.display='none'">
+                <img class="shot" src="assets/images/jobtracker-insights.webp" alt="JobTracker screenshot: Insights" loading="lazy" onerror="this.style.display='none'">
+                <img class="shot" src="assets/images/jobtracker-login.webp" alt="JobTracker screenshot: Login" loading="lazy" onerror="this.style.display='none'">
               </div>
+            </div>
+            <div class="shot-tabs" role="tablist" aria-label="JobTracker screenshots">
+              <button type="button" class="shot-tab active" data-shot="0">Board</button>
+              <button type="button" class="shot-tab" data-shot="1">List</button>
+              <button type="button" class="shot-tab" data-shot="2">Insights</button>
+              <button type="button" class="shot-tab" data-shot="3">Login</button>
             </div>
           </div>
 
@@ -940,5 +984,22 @@
   <!-- JavaScript Modules -->
   <script src="js/project-effects.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    /* Screenshot galleries: click a tab to switch, auto-advance until the visitor interacts */
+    document.querySelectorAll('.shot-gallery').forEach(function (g) {
+      var imgs = g.querySelectorAll('img.shot'), tabs = g.querySelectorAll('.shot-tab'), cur = 0, timer;
+      function show(i) {
+        cur = i;
+        imgs.forEach(function (im, k) { im.classList.toggle('active', k === i); });
+        tabs.forEach(function (t, k) { t.classList.toggle('active', k === i); });
+      }
+      tabs.forEach(function (t, k) {
+        t.addEventListener('click', function () { clearInterval(timer); show(k); });
+      });
+      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        timer = setInterval(function () { show((cur + 1) % imgs.length); }, 4500);
+      }
+    });
+  </script>
 </body>
 </html>
